@@ -1,6 +1,8 @@
 # SavePlate-MobileDevelopment
 Repository for mobile development of SavePlate application
 
+[Check our Main Repository](https://github.com/NadindaK/SavePlate)
+
 ## About our mobile development
 We will use Android Studio and Kotlin Language to develop our mobile application. For our main feature, we will determine the food quality and suggest how to manage excess food using API data and some libraries from Android Studio, such as Retrofit, Room, Live Data, Camera, etc.
 
