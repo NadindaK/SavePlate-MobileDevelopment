@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">SavePlate</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="name">Name</string>
+    <string name="register">Register</string>
+    <string name="welcome">Welcome to SavePlate</string>
+    <string name="photo">Illustration</string>
+    <string name="title">Title</string>
+    <string name="source">Source</string>
+    <string name="scan">Scan here</string>
+    <string name="insights">Food Insights</string>
+    <string name="confirmPass">Konfirmasi Password</string>
+
+    <string-array name="data_title">
+        <item>Tips Menyimpan Sayuran di Kulkas</item>
+        <item>Tips Menyimpan Makanan</item>
+        <item>Jangan simpan sayuran ini di kulkas</item>
+        <item>Ciri-ciri makanan sudah basi</item>
+        <item>Tips mengetahui telur basi</item>
+        <item>Food waste di Indonesia</item>
+    </string-array>
+
+    <string-array name="data_source">
+        <item>detik.com</item>
+        <item>sayurbox.com</item>
+        <item>detik.com</item>
+        <item>royalsnackbox.com</item>
+        <item>royalsnackbox.com</item>
+        <item>ketahananpangan.probolinggokab.go.id</item>
+    </string-array>
+
+    <string-array name="data_photo">
+        <item>@drawable/illustration</item>
+        <item>@drawable/illustration</item>
+        <item>@drawable/illustration</item>
+        <item>@drawable/illustration</item>
+        <item>@drawable/illustration</item>
+        <item>@drawable/illustration</item>
+    </string-array>
+
+    <string-array name="data_article">
+        <item>1. Pisahkan Sayur dan Buah yang Akan Disimpan
+        2. Pilah sayuran
+        3. Curi dan keringkan
+        4. Jangan potong sayuran
+        5. Perhatikan sirkulasi udara
+        6. Gunakan wadah yang sesuai
+        7. Perhatikan ketahanan sayuran
+        8. Periksa kebersihan kulkas
+        9. Jaga suhu kulkas</item>
+        <item>1. Memanaskan Makanan Sebelum Disimpan
+        2. Jangan Mencuci Buah Sebelum Dimasukan Ke Kulkas
+        3. Jangan Tutup Makanan Saat Masih Panas
+        4. Jangan Menyimpan Makanan Diluar Ruangan Terlalu Lama
+        5. Simpanlah Makanan Didalam Wadah Tertutup
+        6. Membersihkan Kulkas Secara Berkala</item>
+        <item>Tidak semua sayuran cocok untuk disimpan di kulkas. Misalnya tomat, kentang, dan daun kemangi. Tomat tidak bisa disimpan di kulkas karena dapat menghambat proses pematangan. Sedangkan kentang lebih baik disimpan di tempat yang gelap agar kandungan tepungnya terjaga. Lalu daun kemangi juga tidak cocok untuk disimpan di dalam kulkas karena udara dingin dapat membuat daun kemangi menjadi cepat layu.</item>
+        <item>1. Muncul bau tidak sedap dari makanan
+        2. Adanya jamur di makanan
+        3. Adanya lendir dalam makanan
+        4. Rasa makanan menjadi kecut dan asam
+        5. Warna makanan berubah</item>
+        <item>Kamu bisa mengetahui apakah telur itu masih bagus atau tidak dari sedikit percobaan. Pertama masukkan telur ke dalam air kemudian lihatlah apakah mengambang atau tenggelam. Telur yang masih segar sebagian maka akan berposisi tidur di bagian bawah air.</item>
+        <item>Indonesia adalah Negara kedua terbesar setelah Arab dalam hal food loss dan food waste di dunia. Indonesia diperkirakan menghasilkan 13 juta ton sampah makanan setiap tahunnya. Timbunan food loss dan food waste Indonesia pada 2000-2019 yaitu 23-48 juta ton/tahun setara dengan 115- 184 kg/kapita/tahun. Studi menemukan lebih dari 30% sampah di Indonesia berasal dari makanan. Kehilangan ini menghasilkan kerugian sebesar Rp 213-551 trilyun/tahun atau setara dengan 4-5% PDB Indonesia pertahun.</item>
+    </string-array>
+
+
+
+
+</resources>
