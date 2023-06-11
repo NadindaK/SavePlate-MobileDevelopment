@@ -14,8 +14,8 @@ import retrofit2.Response
 class RegisterViewModel(private val pref: UserPreference) : ViewModel() {
     private val _user = MutableLiveData<RegisterResponse>()
 
-    fun postRegister(name: String, email: String, password: String, confPassword : String)  : LiveData<RegisterResponse> {
-        val client = ApiConfig.getApiService().register(name, email, password, confPassword)
+    fun postRegister(username: String, email: String, password: String, confPassword : String)  : LiveData<RegisterResponse> {
+        val client = ApiConfig.getApiService().register(username, email, password, confPassword)
         client.enqueue(object : Callback<RegisterResponse> {
             override fun onResponse(
                 call: Call<RegisterResponse>,

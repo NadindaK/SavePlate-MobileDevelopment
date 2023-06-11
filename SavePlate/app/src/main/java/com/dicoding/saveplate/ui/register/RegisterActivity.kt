@@ -72,13 +72,13 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun setupAction() {
         binding.registerButton.setOnClickListener {
-            val name = binding.edRegisterName.text.toString()
+            val username = binding.edRegisterName.text.toString()
             val email = binding.edRegisterEmail.text.toString()
             val password = binding.edRegisterPassword.text.toString()
             val confPassword = binding.edRegisterConfirmPassword.text.toString()
             when {
-                name.isEmpty() -> {
-                    binding.edRegisterName.error = "Nama tidak boleh kosong"
+                username.isEmpty() -> {
+                    binding.edRegisterName.error = "Username tidak boleh kosong"
                 }
                 email.isEmpty() -> {
                     binding.edRegisterEmail.error = "Email tidak boleh kosong"
@@ -90,7 +90,7 @@ class RegisterActivity : AppCompatActivity() {
                     binding.edRegisterConfirmPassword.error = "Konfirmasi password belum sesuai"
                 }
                 else -> {
-                    registerViewModel.postRegister(name, email, password, confPassword).observe(this){ result ->
+                    registerViewModel.postRegister(username, email, password, confPassword).observe(this){ result ->
 
                             AlertDialog.Builder(this).apply {
                                 setTitle("Register Berhasil!")
