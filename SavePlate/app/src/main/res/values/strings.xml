@@ -12,6 +12,8 @@
     <string name="scan">Scan here</string>
     <string name="insights">Food Insights</string>
     <string name="confirmPass">Konfirmasi Password</string>
+    <string name="profile">Profile</string>
+    <string name="logout">Logout</string>
 
     <string-array name="data_title">
         <item>Tips Menyimpan Sayuran di Kulkas</item>
@@ -32,12 +34,12 @@
     </string-array>
 
     <string-array name="data_photo">
-        <item>@drawable/illustration</item>
-        <item>@drawable/illustration</item>
-        <item>@drawable/illustration</item>
-        <item>@drawable/illustration</item>
-        <item>@drawable/illustration</item>
-        <item>@drawable/illustration</item>
+        <item>@drawable/insight</item>
+        <item>@drawable/insight</item>
+        <item>@drawable/insight</item>
+        <item>@drawable/insight</item>
+        <item>@drawable/insight</item>
+        <item>@drawable/insight</item>
     </string-array>
 
     <string-array name="data_article">
@@ -65,8 +67,6 @@
         <item>Kamu bisa mengetahui apakah telur itu masih bagus atau tidak dari sedikit percobaan. Pertama masukkan telur ke dalam air kemudian lihatlah apakah mengambang atau tenggelam. Telur yang masih segar sebagian maka akan berposisi tidur di bagian bawah air.</item>
         <item>Indonesia adalah Negara kedua terbesar setelah Arab dalam hal food loss dan food waste di dunia. Indonesia diperkirakan menghasilkan 13 juta ton sampah makanan setiap tahunnya. Timbunan food loss dan food waste Indonesia pada 2000-2019 yaitu 23-48 juta ton/tahun setara dengan 115- 184 kg/kapita/tahun. Studi menemukan lebih dari 30% sampah di Indonesia berasal dari makanan. Kehilangan ini menghasilkan kerugian sebesar Rp 213-551 trilyun/tahun atau setara dengan 4-5% PDB Indonesia pertahun.</item>
     </string-array>
-
-
 
 
 </resources>

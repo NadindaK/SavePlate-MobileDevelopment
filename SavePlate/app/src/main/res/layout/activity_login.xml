@@ -17,12 +17,12 @@
         android:src="@drawable/login_register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></ImageView>
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/ed_email_layout"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="55dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
@@ -38,16 +38,16 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/ed_login_email"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="55dp"
             android:hint="@string/email"
             android:inputType="textEmailAddress"
-            android:textColorHint="#616161"></com.google.android.material.textfield.TextInputEditText>
+            android:textColorHint="#616161"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/ed_password_layout"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="55dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="16dp"
@@ -64,11 +64,11 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/ed_login_password"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="55dp"
             android:hint="@string/password"
             android:inputType="textPassword"
             android:textColorHint="#616161"
-            tools:ignore="TextContrastCheck"></com.google.android.material.textfield.TextInputEditText>
+            tools:ignore="TextContrastCheck"/>
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -76,7 +76,7 @@
         android:id="@+id/login_button"
         style="@style/Base.Widget.AppCompat.Button.Colored"
         android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_height="55dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="12dp"
@@ -85,7 +85,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/ed_password_layout"
-        ></com.google.android.material.button.MaterialButton>
+        />
 
 
 

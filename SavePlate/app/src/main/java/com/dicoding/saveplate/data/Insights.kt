@@ -6,7 +6,7 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class Insights (
     val title: String,
-    val article: String,
-    val photo: Int,
     val source : String,
+    val photo: Int,
+    val article: String,
 ) : Parcelable

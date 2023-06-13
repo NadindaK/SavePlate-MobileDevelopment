@@ -13,20 +13,23 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
         return dataStore.data.map { preferences ->
             User(
                 preferences[STATE_KEY] ?: false,
+                preferences[TOKEN] ?:"",
             )
         }
     }
 
 
-    suspend fun login() {
+    suspend fun login(token: String) {
         dataStore.edit { preferences ->
             preferences[STATE_KEY] = true
+            preferences[TOKEN] = token
         }
     }
 
     suspend fun logout() {
         dataStore.edit { preferences ->
             preferences[STATE_KEY] = false
+            preferences[TOKEN] = ""
         }
     }
 
@@ -35,6 +38,7 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
         private var INSTANCE: UserPreference? = null
 
         private val STATE_KEY = booleanPreferencesKey("state")
+        private val TOKEN = stringPreferencesKey("token")
 
         fun getInstance(dataStore: DataStore<Preferences>): UserPreference {
             return INSTANCE ?: synchronized(this) {

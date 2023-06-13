@@ -26,10 +26,6 @@ class RegisterActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_register)
-
-//        val btnRegister: Button = findViewById(R.id.register_button)
-//        btnRegister.setOnClickListener(this)
 
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -38,17 +34,6 @@ class RegisterActivity : AppCompatActivity() {
         setupViewModel()
         setupAction()
     }
-
-//    override fun onClick(v: View) {
-//        when (v.id) {
-//            R.id.button_login -> {
-//                val move = Intent(this@RegisterActivity, MainActivity::class.java)
-//                moveData.putExtra(AboutPage.NAME, "Nadinda Kalila")
-//                moveData.putExtra(AboutPage.EMAIL, "nadinda.kalila@ui.ac.id")
-//                startActivity(move)
-//            }
-//        }
-//    }
 
     private fun setupView() {
         @Suppress("DEPRECATION")
