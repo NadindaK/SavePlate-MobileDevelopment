@@ -7,9 +7,9 @@
     android:layout_height="wrap_content"
     android:layout_gravity="center"
     android:layout_marginStart="8dp"
-    android:layout_marginTop="4dp"
+    android:layout_marginTop="5dp"
     android:layout_marginEnd="8dp"
-    android:layout_marginBottom="4dp"
+    android:layout_marginBottom="5dp"
     card_view:cardCornerRadius="4dp"
     tools:context=".ui.adapter.ListInsightsAdapter">
 
@@ -20,13 +20,14 @@
 
         <ImageView
             android:id="@+id/img_item_photo"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/photo"
             android:scaleType="centerCrop"
+            android:src="@drawable/insight"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toTopOf="parent"
-            tools:src="@tools:sample/avatars" />
+            card_view:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_item_title"
@@ -34,8 +35,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
+            android:layout_marginTop="2dp"
             android:layout_toEndOf="@id/img_item_photo"
-            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:textSize="18sp"
             android:textStyle="bold"
             card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintStart_toEndOf="@+id/img_item_photo"
@@ -45,10 +48,11 @@
         <TextView
             android:id="@+id/tv_item_source"
             android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
             android:ellipsize="end"
-            android:maxLines="5"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
             card_view:layout_constraintBottom_toBottomOf="@+id/img_item_photo"
             card_view:layout_constraintEnd_toEndOf="@+id/tv_item_title"
             card_view:layout_constraintStart_toStartOf="@+id/tv_item_title"

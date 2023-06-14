@@ -11,6 +11,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.dicoding.saveplate.R
 import com.dicoding.saveplate.data.Insights
+import com.dicoding.saveplate.ui.detailInsight.DetailInsightActivity
 
 class ListInsightsAdapter(private val listInsights: ArrayList<Insights>) : RecyclerView.Adapter<ListInsightsAdapter.ListViewHolder>() {
 
@@ -32,11 +33,11 @@ class ListInsightsAdapter(private val listInsights: ArrayList<Insights>) : Recyc
         holder.tvTitle.text = title
         holder.tvSource.text = source
         val holderContext = holder.itemView.context
-//        holder.itemView.setOnClickListener {
-//            val moveObject = Intent(holderContext, DetailConcert::class.java)
+        holder.itemView.setOnClickListener {
+            val moveObject = Intent(holderContext, DetailInsightActivity::class.java)
 //            moveObject.putExtra(DetailConcert.DETAIL_CONCERT, listConcert[holder.adapterPosition])
-//            holderContext.startActivity(moveObject)
-//        }
+            holderContext.startActivity(moveObject)
+        }
     }
 
     override fun getItemCount(): Int = listInsights.size
