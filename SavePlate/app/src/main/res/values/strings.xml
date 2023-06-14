@@ -14,6 +14,8 @@
     <string name="confirmPass">Konfirmasi Password</string>
     <string name="profile">Profile</string>
     <string name="logout">Logout</string>
+    <string name="insight">Insight</string>
+    <string name="article">article</string>
 
     <string-array name="data_title">
         <item>Tips Menyimpan Sayuran di Kulkas</item>
