@@ -1,25 +1,36 @@
 package com.dicoding.saveplate.retrofit
 
 
+import com.dicoding.saveplate.data.LoginPayload
+import com.dicoding.saveplate.data.RegisterPayload
 import com.dicoding.saveplate.response.*
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.http.*
 
 interface ApiService {
-    @FormUrlEncoded
     @POST("/signup")
     fun register(
-        @Field("username") username :  String,
-        @Field("email") email :  String,
-        @Field("password") password :  String,
-        @Field("confPassword") confPassword :  String
+       @Body payload: RegisterPayload
     ) : Call<RegisterResponse>
 
-    @FormUrlEncoded
     @POST("/signin")
     fun login(
-        @Field("email") email :  String,
-        @Field("password") password :  String
+        @Body payload: LoginPayload
     ) : Call<LoginResponse>
+
+    @GET("/user")
+    fun getProfile(
+        @Header("Authorization") token: String,
+        @Header("Cookie") jwtToken: String,
+    ): Call<ProfileResponse>
+
+
+    @Multipart
+    @POST("/predict")
+    fun scan(
+        @Part file: MultipartBody.Part,
+    ): Call<ScanResponse>
 
 }

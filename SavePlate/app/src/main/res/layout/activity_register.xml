@@ -5,138 +5,201 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/green_700"
-    tools:context=".ui.register.RegisterActivity">
+    tools:context=".ui.register.RegisterActivity"
+    android:padding="5dp">
 
-    <ImageView
-        android:id="@+id/iv_photo"
-        android:layout_width="171dp"
-        android:layout_height="186dp"
-        android:layout_marginTop="20dp"
-        android:contentDescription="@string/photo"
-        android:src="@drawable/register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></ImageView>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/ed_name_layout"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="15dp"
-        app:boxCornerRadiusBottomEnd="10dp"
-        app:boxCornerRadiusBottomStart="10dp"
-        app:boxCornerRadiusTopEnd="10dp"
-        app:boxCornerRadiusTopStart="10dp"
-        app:boxBackgroundColor="@color/white"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_photo">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/ed_register_name"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:hint="@string/name"
-            android:inputType="text"
-            android:textColorHint="#616161"
-            tools:ignore="TextContrastCheck"></com.google.android.material.textfield.TextInputEditText>
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="match_parent">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/ed_email_layout"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="16dp"
-        app:boxCornerRadiusBottomEnd="10dp"
-        app:boxCornerRadiusBottomStart="10dp"
-        app:boxCornerRadiusTopEnd="10dp"
-        app:boxCornerRadiusTopStart="10dp"
-        app:boxBackgroundColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ed_name_layout">
+            <ImageView
+                android:id="@+id/iv_photo"
+                android:layout_width="171dp"
+                android:layout_height="186dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:contentDescription="@string/photo"
+                android:src="@drawable/register"
+                app:layout_constraintBottom_toTopOf="@+id/textView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
-        <com.dicoding.saveplate.ui.customView.EmailEditText
-            android:id="@+id/ed_register_email"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:hint="@string/email"
-            android:inputType="textEmailAddress"
-            android:textColorHint="#616161"
-            tools:ignore="SpeakableTextPresentCheck"></com.dicoding.saveplate.ui.customView.EmailEditText>
-    </com.google.android.material.textfield.TextInputLayout>
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="1dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.024"
+                tools:visibility="visible" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/ed_password_layout"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="16dp"
-        app:passwordToggleEnabled="true"
-        app:boxCornerRadiusBottomEnd="10dp"
-        app:boxCornerRadiusBottomStart="10dp"
-        app:boxCornerRadiusTopEnd="10dp"
-        app:boxCornerRadiusTopStart="10dp"
-        app:boxBackgroundColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ed_email_layout">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ed_name_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                app:boxBackgroundColor="@color/white"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/iv_photo"
+                app:layout_constraintStart_toStartOf="@+id/iv_photo"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:startIconDrawable="@drawable/ic_baseline_person_24">
 
-        <com.dicoding.saveplate.ui.customView.PasswordEditText
-            android:id="@+id/ed_register_password"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:hint="@string/password"
-            android:inputType="textPassword"
-            android:textColorHint="#616161"
-            tools:ignore="SpeakableTextPresentCheck"></com.dicoding.saveplate.ui.customView.PasswordEditText>
-    </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_register_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/name"
+                    android:inputType="text"
+                    android:textColorHint="#616161"
+                    tools:ignore="TextContrastCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/ed_confirm_password_layout"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="15dp"
-        app:boxCornerRadiusBottomEnd="10dp"
-        app:boxCornerRadiusBottomStart="10dp"
-        app:boxCornerRadiusTopEnd="10dp"
-        app:boxCornerRadiusTopStart="10dp"
-        app:boxBackgroundColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:passwordToggleEnabled="true"
-        app:layout_constraintTop_toBottomOf="@id/ed_password_layout">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ed_email_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="16dp"
+                app:boxBackgroundColor="@color/white"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/ed_name_layout"
+                app:layout_constraintStart_toStartOf="@+id/ed_name_layout"
+                app:layout_constraintTop_toBottomOf="@id/ed_name_layout"
+                app:startIconDrawable="@drawable/baseline_email_24">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/ed_register_confirm_password"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:hint="@string/confirmPass"
-            android:inputType="textPassword"
-            android:textColorHint="#616161"
-            tools:ignore="TextContrastCheck"></com.google.android.material.textfield.TextInputEditText>
-    </com.google.android.material.textfield.TextInputLayout>
+                <com.dicoding.saveplate.ui.customView.EmailEditText
+                    android:id="@+id/ed_register_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:textColorHint="#616161"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/register_button"
-        style="@style/Base.Widget.AppCompat.Button.Colored"
-        android:layout_width="0dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="12dp"
-        android:text="@string/register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/ed_confirm_password_layout"
-        tools:ignore="TextContrastCheck" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ed_password_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="16dp"
+                app:boxBackgroundColor="@color/white"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ed_email_layout"
+                app:passwordToggleEnabled="true"
+                app:startIconDrawable="@drawable/baseline_lock_24">
+
+                <com.dicoding.saveplate.ui.customView.PasswordEditText
+                    android:id="@+id/ed_register_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:textColorHint="#616161"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ed_confirm_password_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="16dp"
+                app:boxBackgroundColor="@color/white"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ed_password_layout"
+                app:passwordToggleEnabled="true"
+                app:startIconDrawable="@drawable/baseline_lock_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_register_confirm_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/confirmPass"
+                    android:inputType="textPassword"
+                    android:textColorHint="#616161"
+                    tools:ignore="TextContrastCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/register_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="14dp"
+                android:background="@drawable/btn_fill"
+                android:text="@string/register"
+                app:cornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/ed_confirm_password_layout"
+                app:layout_constraintHorizontal_bias="0.437"
+                app:layout_constraintStart_toStartOf="@+id/ed_confirm_password_layout"
+                app:layout_constraintTop_toBottomOf="@+id/ed_confirm_password_layout"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Register"
+                android:textColor="@color/white"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/progressBar"
+                app:layout_constraintEnd_toEndOf="@+id/iv_photo"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/ed_name_layout"
+                app:layout_constraintTop_toTopOf="@+id/progressBar"
+                app:layout_constraintVertical_bias="1.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

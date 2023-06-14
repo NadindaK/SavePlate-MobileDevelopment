@@ -2,6 +2,7 @@ package com.dicoding.saveplate.ui.login
 
 import android.util.Log
 import androidx.lifecycle.*
+import com.dicoding.saveplate.data.LoginPayload
 import com.dicoding.saveplate.data.User
 import com.dicoding.saveplate.data.UserPreference
 import com.dicoding.saveplate.response.LoginResponse
@@ -19,14 +20,14 @@ class LoginViewModel(private val pref: UserPreference) : ViewModel()  {
         return pref.getUser().asLiveData()
     }
 
-    fun login() {
+    fun login(token : String) {
         viewModelScope.launch {
-            pref.login()
+            pref.login(token)
         }
     }
 
     fun postLogin(email: String, password: String)  : LiveData<LoginResponse> {
-        val client = ApiConfig.getApiService().login(email, password)
+        val client = ApiConfig.getApiService().login(LoginPayload( email, password))
         client.enqueue(object : Callback<LoginResponse> {
             override fun onResponse(
                 call: Call<LoginResponse>,

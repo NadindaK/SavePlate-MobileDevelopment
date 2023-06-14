@@ -18,7 +18,24 @@ class ApiConfig {
                 .addInterceptor(loggingInterceptor)
                 .build()
             val retrofit = Retrofit.Builder()
-                .baseUrl("http://34.143.148.129:5000/")
+                .baseUrl("http://34.126.114.85:5000/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(client)
+                .build()
+            return retrofit.create(ApiService::class.java)
+        }
+
+        fun getApiServiceScan(): ApiService {
+            val loggingInterceptor =
+                HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
+            val client = OkHttpClient.Builder()
+                .connectTimeout(30, TimeUnit.SECONDS)
+                .readTimeout(30, TimeUnit.SECONDS)
+                .writeTimeout(30, TimeUnit.SECONDS)
+                .addInterceptor(loggingInterceptor)
+                .build()
+            val retrofit = Retrofit.Builder()
+                .baseUrl("http://34.126.114.85:5001/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()
