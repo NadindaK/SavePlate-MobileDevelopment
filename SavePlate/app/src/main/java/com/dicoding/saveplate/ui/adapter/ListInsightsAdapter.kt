@@ -35,7 +35,7 @@ class ListInsightsAdapter(private val listInsights: ArrayList<Insights>) : Recyc
         val holderContext = holder.itemView.context
         holder.itemView.setOnClickListener {
             val moveObject = Intent(holderContext, DetailInsightActivity::class.java)
-//            moveObject.putExtra(DetailConcert.DETAIL_CONCERT, listConcert[holder.adapterPosition])
+            moveObject.putExtra(DetailInsightActivity.DETAIL_INSIGHT, listInsights[holder.adapterPosition])
             holderContext.startActivity(moveObject)
         }
     }
