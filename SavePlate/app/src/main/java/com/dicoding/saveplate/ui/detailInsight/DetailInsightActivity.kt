@@ -1,5 +1,7 @@
 package com.dicoding.saveplate.ui.detailInsight
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -13,7 +15,6 @@ import com.dicoding.saveplate.ui.profile.ProfileViewModel
 
 class DetailInsightActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailInsightBinding
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +38,8 @@ class DetailInsightActivity : AppCompatActivity() {
         supportActionBar?.apply {
             title = getString(R.string.insight)
         }
+
+        supportActionBar!!.setBackgroundDrawable(ColorDrawable(Color.parseColor("#44746D")))
 
     }
 

@@ -44,6 +44,8 @@
         <item>@drawable/insight</item>
     </string-array>
 
+
+
     <string-array name="data_article">
         <item>1. Pisahkan Sayur dan Buah yang Akan Disimpan
         2. Pilah sayuran
@@ -69,6 +71,11 @@
         <item>Kamu bisa mengetahui apakah telur itu masih bagus atau tidak dari sedikit percobaan. Pertama masukkan telur ke dalam air kemudian lihatlah apakah mengambang atau tenggelam. Telur yang masih segar sebagian maka akan berposisi tidur di bagian bawah air.</item>
         <item>Indonesia adalah Negara kedua terbesar setelah Arab dalam hal food loss dan food waste di dunia. Indonesia diperkirakan menghasilkan 13 juta ton sampah makanan setiap tahunnya. Timbunan food loss dan food waste Indonesia pada 2000–2019 yaitu 23-48 juta ton/tahun setara dengan 115- 184 kg/kapita/tahun. Studi menemukan lebih dari 30% sampah di Indonesia berasal dari makanan. Kehilangan ini menghasilkan kerugian sebesar Rp 213-551 trilyun/tahun atau setara dengan 4-5% PDB Indonesia pertahun.</item>
     </string-array>
+    <string name="title_activity_donate_loc">DonateLocActivity</string>
+    <string name="donate">Donate</string>
+    <string name="donateloc">"Donation Discover "</string>
+    <string name="home">Home</string>
+    <string name="scanPhoto">Food Scan</string>
 
 
 </resources>

@@ -25,6 +25,10 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
 import android.Manifest
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
+import android.view.MenuItem
+import com.dicoding.saveplate.MainActivity
 import com.dicoding.saveplate.R
 //import com.dicoding.saveplate.data.UserPreference
 import com.dicoding.saveplate.databinding.ActivityProfileBinding
@@ -38,11 +42,14 @@ import okhttp3.RequestBody.Companion.asRequestBody
 import java.io.File
 import com.dicoding.saveplate.data.UserPreference
 import com.dicoding.saveplate.response.ScanResponse
+import com.dicoding.saveplate.ui.profile.ProfileActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import com.google.android.material.button.MaterialButton
+import com.google.android.material.navigation.NavigationBarView
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
@@ -52,6 +59,7 @@ class ScanActivity : AppCompatActivity() {
     private val binding get() = _binding!!
 
     private var getFile: File? = null
+    private lateinit var bottomNavigationView: BottomNavigationView
 
 //    private var userPreference: UserPreference
 
@@ -90,6 +98,27 @@ class ScanActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         supportActionBar?.title = "Check Food"
+
+        supportActionBar!!.setBackgroundDrawable(ColorDrawable(Color.parseColor("#44746D")))
+
+        bottomNavigationView = binding.navView
+        bottomNavigationView.setOnItemSelectedListener { item ->
+            val intentHome = Intent(this, MainActivity::class.java)
+            val intentProfile = Intent(this, ProfileActivity::class.java)
+            when (item.itemId) {
+                R.id.home -> {
+                    startActivity(intentHome)
+                    true}
+                R.id.scan -> {
+                    true}
+                R.id.profile -> {
+                    startActivity(intentProfile)
+                    true}
+            }
+            false
+        }
+
+        bottomNavigationView.selectedItemId = R.id.scan
 
         if (!allPermissionsGranted()) {
             ActivityCompat.requestPermissions(
@@ -260,4 +289,14 @@ class ScanActivity : AppCompatActivity() {
             binding.progressBar.visibility = View.GONE
         }
     }
+
+//    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+//        val intentHome = Intent(this, MainActivity::class.java)
+//        val intentProfile = Intent(this, ProfileActivity::class.java)
+//        when (item.itemId) {
+//            R.id.home -> startActivity(intentHome)
+//            R.id.profile -> startActivity(intentProfile)
+//        }
+//        return super.onOptionsItemSelected(item)
+//    }
 }

@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:padding="15dp">
+    tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/iv_photo"
@@ -26,7 +25,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
         android:text="@string/scan"
         app:layout_constraintEnd_toEndOf="@+id/iv_photo"
         app:layout_constraintHorizontal_bias="1.0"
@@ -38,9 +38,9 @@
         android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
         android:text="@string/insights"
         android:textColor="@color/black"
         android:textSize="25sp"
@@ -55,12 +55,28 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="12dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_title"
         app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/menu"
+        app:itemTextColor="@color/selector_color"
+        app:itemIconTint="@color/selector_color"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
