@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
+import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
 import androidx.datastore.core.DataStore
@@ -42,7 +43,11 @@ class ProfileActivity : AppCompatActivity() {
 
         supportActionBar?.title = "Profil"
 
+
         bottomNavigationView = binding.navView
+
+        bottomNavigationView.selectedItemId = R.id.profile
+
         bottomNavigationView.setOnItemSelectedListener { item ->
             val intentHome = Intent(this, MainActivity::class.java)
             val intentScan = Intent(this, ScanActivity::class.java)
@@ -59,28 +64,11 @@ class ProfileActivity : AppCompatActivity() {
             false
         }
 
-        bottomNavigationView.selectedItemId = R.id.profile
-
-
-
         setupView()
         setupViewModel()
 
     }
-//
-//    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-//        val intentHome = Intent(this, MainActivity::class.java)
-//        val intentScan = Intent(this, ScanActivity::class.java)
-//        when (item.itemId) {
-//            R.id.home -> {
-//                startActivity(intentHome)
-//                return true}
-//            R.id.scan -> {
-//                startActivity(intentScan)
-//                return true}
-//        }
-//        return false
-//    }
+
 
     private fun setupView() {
         @Suppress("DEPRECATION")
@@ -104,6 +92,10 @@ class ProfileActivity : AppCompatActivity() {
         profileViewModel = ViewModelProvider(this, ViewModelFactory(UserPreference.getInstance(dataStore), this)
         )[ProfileViewModel::class.java]
 
+        profileViewModel.isLoading.observe(this) {
+            showLoading(it)
+        }
+
         profileViewModel.getUser().observe(this) { user ->
             if (!user.isLogin){
                 startActivity(Intent(this, LandingActivity::class.java))
@@ -126,7 +118,10 @@ class ProfileActivity : AppCompatActivity() {
         Glide.with(this).load(profile.pic).circleCrop().override(500 , 500).into(binding.imageView)
         binding.tvName.text = profile.username
         binding.tvEmail.text = profile.email
+    }
 
+    private fun showLoading(isLoading: Boolean) {
+        binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 
 

@@ -5,8 +5,10 @@ import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
@@ -55,6 +57,11 @@ class RegisterActivity : AppCompatActivity() {
     private fun setupViewModel() {
         registerViewModel = ViewModelProvider(this, ViewModelFactory(UserPreference.getInstance(dataStore), this)
         )[RegisterViewModel::class.java]
+
+        registerViewModel.isLoading.observe(this) {
+            showLoading(it)
+        }
+
     }
 
     private fun setupAction() {
@@ -77,27 +84,37 @@ class RegisterActivity : AppCompatActivity() {
                     binding.edRegisterConfirmPassword.error = "Konfirmasi password belum sesuai"
                 }
                 else -> {
-                    registerViewModel.postRegister(username, email, password, confPassword).observe(this){ result ->
+                    registerViewModel.postRegister(username, email, password, confPassword)
+                        .observe(this) { result ->
 
-                            AlertDialog.Builder(this).apply {
-                                setTitle("Register Berhasil!")
-                                setMessage("Silakan login untuk masuk ke aplikasi")
-                                setPositiveButton("Lanjut") { _, _ ->
-                                    val intent = Intent(context, LoginActivity::class.java)
-                                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-                                    startActivity(intent)
-                                    finish()
+                                AlertDialog.Builder(this).apply {
+                                    setTitle("Register Berhasil!")
+                                    setMessage("Silakan login untuk masuk ke aplikasi")
+                                    setPositiveButton("Lanjut") { _, _ ->
+                                        val intent = Intent(context, LoginActivity::class.java)
+                                        intent.flags =
+                                            Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                                        startActivity(intent)
+                                        finish()
+                                    }
+                                    create()
+                                    show()
                                 }
-                                create()
-                                show()
+                            }
+                        registerViewModel.snackbarText.observe(this) {
+                            it.getContentIfNotHandled()?.let { snackBarText ->
+                                Toast.makeText(applicationContext, snackBarText, Toast.LENGTH_SHORT).show()
                             }
                         }
-
-                    }
 
                 }
             }
         }
+    }
+
+    private fun showLoading(isLoading: Boolean) {
+        binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+    }
 }
 
 

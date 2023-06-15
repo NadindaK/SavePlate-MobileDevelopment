@@ -52,6 +52,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
         supportActionBar!!.setBackgroundDrawable(ColorDrawable(Color.parseColor("#44746D")))
 
         bottomNavigationView = binding.navView
+
+        bottomNavigationView.selectedItemId = R.id.home
+
         bottomNavigationView.setOnItemSelectedListener { item ->
             val intentProfile = Intent(this, ProfileActivity::class.java)
             val intentScan = Intent(this, ScanActivity::class.java)
@@ -67,8 +70,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
             }
             false
         }
-
-        bottomNavigationView.selectedItemId = R.id.home
 
         setupViewModel()
 
@@ -133,17 +134,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
         return super.onOptionsItemSelected(item)
     }
 
-//    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-////        val intentHome = Intent(this, MainActivity::class.java)
-//        val intentScan = Intent(this, ScanActivity::class.java)
-//        val intentProfile = Intent(this, ProfileActivity::class.java)
-//        when (item.itemId) {
-//            R.id.home -> startActivity(intentHome)
-//            R.id.scan -> startActivity(intentScan)
-//            R.id.profile -> startActivity(intentProfile)
-//            R.id.logout -> mainViewModel.logout()
-//
-//        }
-//        return super.onOptionsItemSelected(item)
-//    }
+    override fun onBackPressed() {
+        finishAffinity()
+    }
+
+
 }

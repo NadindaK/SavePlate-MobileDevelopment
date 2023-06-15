@@ -5,21 +5,16 @@ import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.util.Log
-import android.view.MenuItem
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.bumptech.glide.Glide
 import com.dicoding.saveplate.MainActivity
 import com.dicoding.saveplate.R
 import com.dicoding.saveplate.databinding.ActivityResultBinding
 import com.dicoding.saveplate.ui.donateLoc.DonateLocActivity
 import com.dicoding.saveplate.ui.profile.ProfileActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import org.json.JSONObject
 
 
-class ResultActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
+class ResultActivity : AppCompatActivity() {
 
     private var _binding: ActivityResultBinding? = null
     private val binding get() = _binding!!
@@ -35,7 +30,24 @@ class ResultActivity : AppCompatActivity(), BottomNavigationView.OnNavigationIte
         supportActionBar!!.setBackgroundDrawable(ColorDrawable(Color.parseColor("#44746D")))
 
         bottomNavigationView = binding.navView
-        bottomNavigationView.setOnNavigationItemSelectedListener(this)
+
+        bottomNavigationView.selectedItemId = R.id.scan
+
+        bottomNavigationView.setOnItemSelectedListener { item ->
+            val intentHome = Intent(this, MainActivity::class.java)
+            val intentProfile = Intent(this, ProfileActivity::class.java)
+            when (item.itemId) {
+                R.id.home -> {
+                    startActivity(intentHome)
+                    true}
+                R.id.scan -> {
+                    true}
+                R.id.profile -> {
+                    startActivity(intentProfile)
+                    true}
+            }
+            false
+        }
 
         val confidence = intent.getStringExtra("confidence")
         val label = intent.getStringExtra("label")
@@ -68,15 +80,5 @@ class ResultActivity : AppCompatActivity(), BottomNavigationView.OnNavigationIte
 
     }
 
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        val intentHome = Intent(this, MainActivity::class.java)
-        val intentScan = Intent(this, ScanActivity::class.java)
-        val intentProfile = Intent(this, ProfileActivity::class.java)
-        when (item.itemId) {
-            R.id.home -> startActivity(intentHome)
-            R.id.scan -> startActivity(intentScan)
-            R.id.profile -> startActivity(intentProfile)
-        }
-        return super.onOptionsItemSelected(item)
-    }
+
 }

@@ -57,11 +57,9 @@ class ScanActivity : AppCompatActivity() {
 
     private var _binding: ActivityScanBinding? = null
     private val binding get() = _binding!!
-
     private var getFile: File? = null
     private lateinit var bottomNavigationView: BottomNavigationView
 
-//    private var userPreference: UserPreference
 
     companion object {
         const val CAMERA_X_RESULT = 200
@@ -102,6 +100,9 @@ class ScanActivity : AppCompatActivity() {
         supportActionBar!!.setBackgroundDrawable(ColorDrawable(Color.parseColor("#44746D")))
 
         bottomNavigationView = binding.navView
+
+        bottomNavigationView.selectedItemId = R.id.scan
+
         bottomNavigationView.setOnItemSelectedListener { item ->
             val intentHome = Intent(this, MainActivity::class.java)
             val intentProfile = Intent(this, ProfileActivity::class.java)
@@ -118,7 +119,6 @@ class ScanActivity : AppCompatActivity() {
             false
         }
 
-        bottomNavigationView.selectedItemId = R.id.scan
 
         if (!allPermissionsGranted()) {
             ActivityCompat.requestPermissions(
@@ -290,13 +290,4 @@ class ScanActivity : AppCompatActivity() {
         }
     }
 
-//    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-//        val intentHome = Intent(this, MainActivity::class.java)
-//        val intentProfile = Intent(this, ProfileActivity::class.java)
-//        when (item.itemId) {
-//            R.id.home -> startActivity(intentHome)
-//            R.id.profile -> startActivity(intentProfile)
-//        }
-//        return super.onOptionsItemSelected(item)
-//    }
 }
