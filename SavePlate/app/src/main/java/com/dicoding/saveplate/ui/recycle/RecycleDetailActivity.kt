@@ -1,4 +1,4 @@
-package com.dicoding.saveplate.ui.detailInsight
+package com.dicoding.saveplate.ui.recycle
 
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
@@ -7,16 +7,20 @@ import android.view.WindowInsets
 import android.view.WindowManager
 import com.dicoding.saveplate.R
 import com.dicoding.saveplate.data.Insights
+import com.dicoding.saveplate.data.Recycle
 import com.dicoding.saveplate.databinding.ActivityDetailInsightBinding
+import com.dicoding.saveplate.databinding.ActivityRecycleDetailBinding
 
-class DetailInsightActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityDetailInsightBinding
+class RecycleDetailActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityRecycleDetailBinding
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityDetailInsightBinding.inflate(layoutInflater)
+
+        binding = ActivityRecycleDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         supportActionBar?.hide()
 
         setupView()
@@ -34,7 +38,7 @@ class DetailInsightActivity : AppCompatActivity() {
             )
         }
         supportActionBar?.apply {
-            title = getString(R.string.insight)
+            title = "Recycle"
         }
 
     }
@@ -42,10 +46,10 @@ class DetailInsightActivity : AppCompatActivity() {
     private fun setupData(){
 
         val insight = if (Build.VERSION.SDK_INT >= 33) {
-            intent.getParcelableExtra(DETAIL_INSIGHT, Insights::class.java)
+            intent.getParcelableExtra(DETAIL_RECYCLE, Recycle::class.java)
         } else {
             @Suppress("DEPRECATION")
-            intent.getParcelableExtra(DETAIL_INSIGHT)
+            intent.getParcelableExtra(DETAIL_RECYCLE)
         }
 
         if (insight != null) {
@@ -60,6 +64,6 @@ class DetailInsightActivity : AppCompatActivity() {
     }
 
     companion object {
-        const val DETAIL_INSIGHT = ""
+        const val DETAIL_RECYCLE = ""
     }
 }

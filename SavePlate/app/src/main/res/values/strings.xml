@@ -16,6 +16,11 @@
     <string name="logout">Logout</string>
     <string name="insight">Insight</string>
     <string name="article">article</string>
+    <string name="rotten">Sorry, your food is not suitable for consumption.\nLet\'s find a way to process it by clicking the Process button.</string>
+    <string name="condition">Condition: Rotten/Fresh</string>
+    <string name="check">check another</string>
+    <string name="donate">Donate</string>
+    <string name="recycle">Recycle</string>
 
     <string-array name="data_title">
         <item>Tips Menyimpan Sayuran di Kulkas</item>
@@ -24,6 +29,15 @@
         <item>Ciri-ciri makanan sudah basi</item>
         <item>Tips mengetahui telur basi</item>
         <item>Food waste di Indonesia</item>
+    </string-array>
+
+    <string-array name="data_title2">
+        <item>7 Langkah Gampang Menyulap Sampah Makanan Jadi Pupuk Kompos</item>
+        <item>Mengubah Sampah Makanan Menjadi Ekoenzim</item>
+        <item>Jangan Dibuang, Begini Cara Mengolah Sisa Makanan Jadi Kompos Tanpa Bau dan Bersih</item>
+        <item>Membuat Pupuk Organik Cair Dari Buah Buahan Busuk</item>
+        <item>Cara Membuat Pupuk Organik dari Kulit Pisang</item>
+        <item>Cara Membuat Mol Dari Buah Pepaya Busuk</item>
     </string-array>
 
     <string-array name="data_source">
@@ -35,38 +49,57 @@
         <item>ketahananpangan.probolinggokab.go.id</item>
     </string-array>
 
+    <string-array name="data_source2">
+        <item>dbs.com</item>
+        <item>kompas.com</item>
+        <item>momsmoney.id</item>
+        <item>cybex.pertanian.go.id</item>
+        <item>sibakuljogja.jogjaprov.go.id</item>
+        <item>cybex.pertanian.go.id</item>
+    </string-array>
+
     <string-array name="data_photo">
-        <item>@drawable/insight</item>
-        <item>@drawable/insight</item>
-        <item>@drawable/insight</item>
-        <item>@drawable/insight</item>
-        <item>@drawable/insight</item>
-        <item>@drawable/insight</item>
+        <item>@drawable/img_1</item>
+        <item>@drawable/img_2</item>
+        <item>@drawable/img_3</item>
+        <item>@drawable/img_4</item>
+        <item>@drawable/img_5</item>
+        <item>@drawable/img_6</item>
+    </string-array>
+
+    <string-array name="data_photo2">
+        <item>@drawable/img_7</item>
+        <item>@drawable/img_8</item>
+        <item>@drawable/img_9</item>
+        <item>@drawable/img_10</item>
+        <item>@drawable/img_11</item>
+        <item>@drawable/img_12</item>
     </string-array>
 
     <string-array name="data_article">
-        <item>1. Pisahkan Sayur dan Buah yang Akan Disimpan
-        2. Pilah sayuran
-        3. Curi dan keringkan
-        4. Jangan potong sayuran
-        5. Perhatikan sirkulasi udara
-        6. Gunakan wadah yang sesuai
-        7. Perhatikan ketahanan sayuran
-        8. Periksa kebersihan kulkas
-        9. Jaga suhu kulkas</item>
-        <item>1. Memanaskan Makanan Sebelum Disimpan
-        2. Jangan Mencuci Buah Sebelum Dimasukan Ke Kulkas
-        3. Jangan Tutup Makanan Saat Masih Panas
-        4. Jangan Menyimpan Makanan Diluar Ruangan Terlalu Lama
-        5. Simpanlah Makanan Didalam Wadah Tertutup
+        <item>Sayuran merupakan salah satu bahan makanan yang wajib tersedia di rumah. Biasanya orang–orang membeli dalam jumlah yang banyak lalu disimpan di kulkas.\n\nSayangnya, sayuran memiliki kadar air yang cukup tinggi sehingga tidak bisa disimpan di kulkas terlalu lama. Ada beberapa hal yang perlu diperhatikan saat akan menyimpan sayuran di kulkas agar awet. Berikut cara menyimpan sayuran di kulkas supaya awet.\n\n1. Pisahkan Sayur dan Buah yang Akan Disimpan\nSayuran buah tidak dapat disimpan secara bersamaan di kulkas. Buah menghasilkan zat etilen yang membuat bahan makan lain menjadi cepat matang. Oleh karena itu, penyimpanan sayur dan buah perlu dipisahkan. Caranya dapat dengan membedakan wadah yang dipakai atau disimpan di rak kulkas yang berbeda.\n\n2. Pilah Sayuran\nSayuran yang akan disimpan di dalam kulkas perlu dipilah terlebih dahulu. Jika ada sayuran yang \'cacat\' atau sebagian yang sudah layu harus dibuang sehingga kerusakannya tidak menyebar ke bagian lain. Lalu untuk sayuran yang berakar dapat dipotong terlebih dahulu bagian akarnya agar menghindari bakteri yang dapat merusak kesegaran sayur.\n\n3. Cuci dan Keringkan Sayuran\nSebelum dimasukkan ke kulkas, sayuran yang sudah dibeli lantas dicuci dengan air sampai bersih. Hal ini bertujuan untuk membasmi bakteri yang menempel pada sayuran. Bakteri yang ada pada sayuran dapat membuat sayuran cepat busuk.Setelah dicuci hingga bersih, keringkan sayuran. Mengeringkan sayuran dapat dengan meniriskan sisa–sisa air yang ada di sayuran. Jangan sampai mengeringkan sayuran dengan lap ya.\n\n4. Jangan Potong Sayuran\nSayuran yang akan disimpan di kulkas alangkah lebih baik disimpan dalam keadaan utuh. Proses pemotongan sayuran ini akan memperbesar potensi membusuknya sayuran.\n\n5. Perhatikan Sirkulasi Udara\nSayuran memiliki kadar air yang tinggi. Air yang ada pada sayuran dapat memberikan kelembaban dan menjadikan sayuran lebih awet. Oleh karena itu, pastikan sayuran yang disimpan di kulkas memiliki sirkulasi udara yang baik. Caranya, sayuran dapat dibungkus dengan wadah plastik yang dilubangi, atau jaring buah maupun kertas tisu. Kertas tisu dapat membantu menyerap suhu kulkas sehingga membuat sayuran menjadi lebih awet.6. Gunakan Wadah Sesuai Jenis Sayuran\nUntuk beberapa jenis sayuran yang memiliki batang yang keras khususnya, dapat disimpan di dalam wadah tertutup. Seperti wortel, brokoli, dan jagung dapat disimpan di wadah. Namun, untuk sayuran hijau dapat menggunakan wadah tanpa tutup agar sirkulasi udara lebih baik. Selain agar lebih awet, penggunaan wadah ini akan menjadikan kulkas lebih bersih dan rapi.\n\n7. Perhatikan Ketahanan Sayuran\nBeberapa sayuran dapat bertahan lama di dalam kulkas, namun ada juga sayuran yang tidak begitu tahan lama. Agar tidak terbuang sia-sia, perlu diketahui masa penyimpanan dari setiap jenis sayuran. Contohnya untuk sayuran berdaun hijau hanya bertahan 3 - 5 hari saja. Sedangkan untuk sayuran hijau tanpa daun dapat bertahan hingga 7 hari. Lebih lama lagi, sayuran umbi-umbian dan yang berbatang dapat tahan hingga 3 minggu.\n\n8. Periksa Kebersihan Kulkas\nKebersihan kulkas juga penting untuk mendukung ketahanan sayuran yang ada di dalam kulkas. Kulkas yang kotor akan menghasilkan sirkulasi udara yang tidak baik. Selain itu, kulkas kotor juga dapat membuat bakteri dan kotoran menempel di sayuran dan membuat sayuran cepat busuk.\n\n9. Jaga Suhu Kulkas\nSuhu kulkas pada umumnya berada di angka 1 - 4 derajat Celcius. Jika suhu lebih tinggi dari itu, maka bakteri berpotensi untuk berkembang lebih cepat. Jadi suhu kulkas perlu dijaga agar sayuran awet.\n\nItulah 9 cara menyimpan sayuran di kulkas agar awet. Semoga dapat membantu.\n\n</item>
+        <item>1. Memanaskan Makanan Sebelum Disimpan\n
+        2. Jangan Mencuci Buah Sebelum Dimasukan Ke Kulkas\n
+        3. Jangan Tutup Makanan Saat Masih Panas\n
+        4. Jangan Menyimpan Makanan Diluar Ruangan Terlalu Lama\n
+        5. Simpanlah Makanan Didalam Wadah Tertutup\n
         6. Membersihkan Kulkas Secara Berkala</item>
         <item>Tidak semua sayuran cocok untuk disimpan di kulkas. Misalnya tomat, kentang, dan daun kemangi. Tomat tidak bisa disimpan di kulkas karena dapat menghambat proses pematangan. Sedangkan kentang lebih baik disimpan di tempat yang gelap agar kandungan tepungnya terjaga. Lalu daun kemangi juga tidak cocok untuk disimpan di dalam kulkas karena udara dingin dapat membuat daun kemangi menjadi cepat layu.</item>
-        <item>1. Muncul bau tidak sedap dari makanan
-        2. Adanya jamur di makanan
-        3. Adanya lendir dalam makanan
-        4. Rasa makanan menjadi kecut dan asam
-        5. Warna makanan berubah</item>
+        <item>1. Muncul bau tidak sedap dari makanan\n
+        2. Adanya jamur di makanan\n
+        3. Adanya lendir dalam makanan\n
+        4. Rasa makanan menjadi kecut dan asam\n
+        5. Warna makanan berubah\n</item>
         <item>Kamu bisa mengetahui apakah telur itu masih bagus atau tidak dari sedikit percobaan. Pertama masukkan telur ke dalam air kemudian lihatlah apakah mengambang atau tenggelam. Telur yang masih segar sebagian maka akan berposisi tidur di bagian bawah air.</item>
+        <item>Indonesia adalah Negara kedua terbesar setelah Arab dalam hal food loss dan food waste di dunia. Indonesia diperkirakan menghasilkan 13 juta ton sampah makanan setiap tahunnya. Timbunan food loss dan food waste Indonesia pada 2000–2019 yaitu 23-48 juta ton/tahun setara dengan 115- 184 kg/kapita/tahun. Studi menemukan lebih dari 30% sampah di Indonesia berasal dari makanan. Kehilangan ini menghasilkan kerugian sebesar Rp 213-551 trilyun/tahun atau setara dengan 4-5% PDB Indonesia pertahun.</item>
+    </string-array>
+
+    <string-array name="data_article2">
+        <item>Sampah makanan kita ternyata dapat menjadi penyelamat bumi.\n\nSemakin lama waktu di rumah, semakin banyak makanan yang kita konsumsi. Ini berarti semakin banyak sampah makanan yang tersisa. Dari kulit buah, sisa potongan sayuran, nasi, dan masih banyak lagi. Menurut data Food Agriculture Organization, hampir sepertiga makanan yang diproduksi untuk manusia terbuang setiap tahunnya. Berdasarkan data Bappenas, rata-rata tiap tahun ada 13 juta ton makanan di negara kita yang terbuang sia-sia. Ini setara dengan Rp 2 triliun. Wow!\n\nLangkah-langkah membuat pupuk kompos:\n1. Siapkan sampah organik yang akan diolah menjadi pupuk kompos.\n2. Masukkan tanah secukupnya ke dalam wadah yang telah diisi dengan sampah organik. Sesuaikan ketebalan tanah dengan wadah dan volume sampah organik.\n3. Siram permukaan tanah tersebut menggunakan air secukupnya. Kalau mau lebih cepat prosesnya, masukkan larutan EM4 yang bisa didapat di toko yang menjual keperluan bercocoktanam.\n4.Pastikan sampah disimpan secara merata. Sebisa mungkin ketebalan sampah setara dengan ketebalan tanah.\n5. Bila sudah menjelang penuh, masukkan lagi tanah ke dalam wadah yang akan berperan sebagai penutup sampah.\n6. Tutup wadah dengan rapat dan biarkan sekitar tiga minggu. Pastikan wadah pembuat pupuk kompos tidak terkontaminasi oleh air hujan, hewan dan paparan sinar matahari.\n\nSemakin sedikit sampah yang kita buang, semakin kita bertanggung jawab terhadap kelestarian bumi.</item>
+        <item>Diberitakan Kompas.id, Sabtu (21/5/2022), pengolahan sampah makanan rumah tangga menjadi ekoenzim menjadi salah satu solusi untuk menekan jumlah sampah organik.\n\nSebagai informasi, ekoenzim adalah cairan hasil dari fermentasi limbah dapur organik, seperti ampas buah, sayur, dan gula, baik gula coklat, gula merah, maupun gula tebu.\n\nDinukil dari laman waste4change.com, Selasa (1/1/2019), ekoenzim memiliki beberapa fungsi, seperti untuk cairan pel, pembersih dapur, pembersih buah dan sayur, pembasmi hama, serta pupuk tanaman.\n\nUntuk membuat ekoenzim, Anda memerlukan sekitar 300 gram (gr) sampah kulit buah atau sisa sayuran, 100 gr gula, dan 1 liter air.\n\nKemudian, campur dan aduk semua bahan tersebut di dalam wadah tertutup dan simpan pada tempat yang sejuk.\n\nUmumnya, proses fermentasi dalam pembuatan ekoenzim berlangsung selama tiga bulan. Setelah cairan yang dihasilkan berwarna coklat gelap dan memiliki aroma fermentasi asam manis, Anda sudah bisa memanfaatkan cairan tersebut.</item>
+        <item>Limbah makanan atau sisa makanan setiap hari dapat dimanfaatkan untuk membuat kompos sendiri loh. Kamu dapat menggunakannya untuk memberi nutrisi tanaman sebagai pupuk organik terbaik.\n\nCara ini bisa dilakukan untuk tanaman hias yang ditanam di balkon rumah atau apartemen tanpa perlu khawatir mengundang hewan seperti tikus.\n\nUmumnya, kompos dipercaya akan mengundang bau busuk sehingga tidak cocok diberikan pada tanaman di balkon.\n\nNamun, hal tersebut tidak benar. Biasanya kompos yang bau karena kurangnya oksigen dan aerasi.\n\nUntuk membuat kompos dari makanan sisa, kamu perlu menyiapkan hal-hal berikut ini :\n\n1. Wadah yang tertutup\nWadah untuk mengumpulkan limbah makanan dapur, seperti tempat sampah kecil. Tempat sampah besar untuk menampung tumpukan kompos.\n\n2. Lepek\nSimpan kompos di bawah tempat sampah sehingga balkon tetap bersih.\n\n3. Tanah dan pasir\nPilihlah tanah yang berkualitas lebih rendah dari yang biasa digunakan untuk tanaman hiasmu.\n\n4. Bahan organik basah\nKumpulkan sampah dapur termasuk kulit, biji-bijian, produk mentah, kulit telur yang dihancurkan, ampas kopi, dan bahan organik lainnya. Kamu dapat menambahkan beberapa strip koran dan serat yang sudah dikeringkan. Jangan menggunakan produk susu, karena akan menyebabkan bau busuk.\n\n5. Daun basah atau kering, rumput, dan batang.\n\n6. Air\n\nBerikut cara mengolah sisa makanan menjadi kompos :\n\n1. Mulailah mengumpulkan sampah dapur. Tempatkan tempat sampah di suatu tempat di dapur. Saat sudah penuh, bawa isinya ke balkon dan masukkan ke tempat sampah kompos yang lebih besar.\n\n2. Masukkan ke dalam wadah dan tutupi dengan lapisan tanah atau pasir. Tanah dan daun akan menahan bau sampah yang menyengat.\n\n3. Basahi semuanya dengan jumlah air yang banyak. Drainase sangat penting jika tidak ingin kompos merendam air.\n\n4. Periksa tumpukan kompos setiap beberapa hari, tambahkan air bila perlu. Setiap kali menambahkan sampah dapur, tambahkan lapisan bahan tanaman dan tanah dan basah tumpukan.\n\n5. Biarkan saja agar kompos tetap lembab sampai kompos siap setelah beberapa minggu atau bulan.\n\n6. Jika kamu ingin cepat menggunakannya, aduk campuran setiap minggu. Awalnya makanan sisa akan berbau busuk, kamu bisa menutupinya dengan tumpukan tanah setelah diaduk.\n\n7. Kompos sudah siap bila sudah berwarna hitam merata dengan tekstur tanah yang kasar.</item>
+        <item>Dalam cara membuat pupuk organik cair dari buah-buahan busuk ini, kita memerlukan alat serta bahan-bahan yang mudah ditemukan di sekitar kita\n\nAlat dan bahan:\n- Tong atau ember plastik bervolume 50 liter, usahakan yang memiliki penutup. Jika tidak ada penutupnya, maka Anda harus menyediakan plastik bening sebagai penutupnya.\n- Saringan\n- Limbah buah atau buah-buahn yang sudah busuk sebanyak 20 kg\n- Air kelapa sebanyak 10 liter\n- Air cucian beras sebanyak 5 liter\n- Gula merah sebanyak 1 kg\n- Yakult sebanyak 10 btl atau EM4\n- Air sebanyak 20 liter. ( air sumur atau air sungai bukan air pdam)\n\nCara membuat pupuk organik dari buah busuk:\n1. Langkah pertama adalah menyipakan limbah buah-buahan terlebih dahulu. Cuci bersih buah-buahan sisa tersebut untuk menghilangkan pestisida di dalamnya.\n2. Hancurkanlah sisa-sisa buah tersebut, lalu saring dan masukkan ke dalam ember yang sudah disiapkan\n3. Selanjutnya, larutkan air ke dalam ember, tambahkan pula di dalamnya air kelapa, air beras, dan juga gula merah serta tambahkan EM4/ yakult.\n4. Aduk-aduk semua bahan tersebut hingga tercampur rata\n5. Tutup rapat ember dengan penutupnya atau kantong plastik selama 12 – 15 hari agar proses fermentasi dapat berjalan. Tempatkan ember tersebut pada area yang teduh atau tidak terkena cahaya matahari secara langsung dan terhindar dari air hujan\n6. Lakukan pegontrolan setiap 5 hari sekali sambil sesekali diaduk agar tidak terdapat endapan di dalamnya\n7. Selepas 12 – 15 hari, Anda sudah dapat menggunakan pupuk cair dari limbah buah-buahan tersebut. Ciri ciri pupuk iniberhasil jika warna nya hitam dan tidak bau menyengat\n8.Sebelum diaplikasikan sebaiknya disaring lebih dahulu kemudian ampas yang tersisa bisa dimanfaatkan untuk pupuk pada tanamanDosis dan cara penggunaan pupuk.\n\nUntuk merangsang pertumbuhan pada akar, batang, daun, dan juga buah, Anda dapat melarutkan 10 cc larutan pupuk dari limbah buah ke dalam 1 liter air. Semprotkan pada bagian tanaman menggunakan sprayer.\n\nSedangkan untuk proses pembentukan akar saja, maka Anda dapat mencampurkan pupuk organik cair ini dengan komposisi sebesar 30 cc pupuk untuk 1 liter air.\n\nHasil ujicoba POC ini yang dilakukan pada tanaman durian di Desa Mekar jaya kec sebulu kab kutai kartanegara bahwa denganj pemberian POC ini bisa mempercepat pembungaan dan lebih maksimal jumlahnya.</item>
+        <item>Pupuk organik adalah pupuk yang bahan utamanya terdiri dari bahan-bahan organik, seperti dari tanaman atau kotoran hewan. Pupuk organik memiliki kandungan hara yang lengkap yang bermanfaat untuk tanaman. Pupuk ini bisa berbentuk padat atau cair dan mampu menutrisi tanah sehingga tanaman pun tumbuh dengan subur. Salah satunya pupuk organik cair ini yaitu POC dari kulit pisang yang dapat kita buat sendiri dirumah, lho Sahabat Tani. Kulit buah pisang juga memiliki manfaat yang luar biasa untuk tanaman, lho. Kulit pisang memiliki potasium yang bisa bermanfaat untuk tumbuh kembang tanaman Moms di rumah. Kandungan fosfor pada kulit pisang pun dapat membantu tanaman untuk tumbuh subur.\n\nMelansir neurafarm.com jika kita menggunakan kulit pisang kepok sebagai pupuk cair, maka kandungan unsur hara yang terdapat dalam pupuk tersebut yaitu C-Organik sebesar 0,55%, N-total 0,18%, P2O5 0,043%, K2O 1,137%, C/N 3,06% dan mempunyai pH 4,5.\n\nBahan bahan yang dibutuhkan yaitu :\n1. Kulit pisang\n2. Gula Pasir\n3. Air bersih\n4. Botol bekas\n\nTahap pembuatan\n1. Pertama, bersihkan dahulu botol-botol bekas yang akan digunakan\n2. Kedua, kulit pisang dihaluskan dengan cara diblender. Namun jika tidak ada blender, bisa dengan cara mencincang kulit pisang menjadi potongan yang sangat sangat kecil.\n3. Selanjutnya, gula pasir dimasukkan kedalam botol dengan perbandingan gula pasir : volume botol (1 sendok : 250 ml).\n4. Gula tersebut dilarutkan dengan air bersih di dalam botol (volume air bebas)\n5. Kulit pisang yang telah dihaluskan, dimasukkan ke dalam botol bekas yang telah berisi larutan gula pasir.\n6. Selanjutnya air ditambahkan kedalam botol hingga batas leher botol.\n7. Setelah itu botol dapat ditutup dengan rapat dan setelah itu didiamkan lebih dari 7-10 hari.\n8. Tutup botol dibuka setiap hari agar gas yang terkandung di dalam botol dapat keluar.\n9. Pupuk pun dapat langsung digunakan pada tanaman setelah didiamkan lebih dari 7 hari.\n\nSelain itu, sebagai pengganti gula pasir, dapat digunakan EM4 pada pembuatan pupuk cair ini dengan :\n1. Menyiapkan kulit pisang dan air 1 kg : 1L.\n2. Kulit pisang dihaluskan dan dimasukkan kedalam wadah.\n3. Selanjutnya larutan EM4 dicampurkan ke dalam kulit pisang halus dan air yang telah bercampur dengan rata.\n4. Pupuk ini didiamkan selama 3-4 hari lamanya.\n5. Setelah itu pupuk pun dapat digunakan dengan diencerkan terlebih dahulu yaitu 1 L air diencerkan dengan 5 L air.\n\nSelain cara diatas, Sahabat Tani juga bisa langsung mengubur kulit pisang dalam tanah yang ditumbuhi tanaman bunga, tanaman buah, atau sayuran. Biarkan kulit pisang membusuk dan mengeluarkan nutrisi untuk tanaman.</item>
         <item>Indonesia adalah Negara kedua terbesar setelah Arab dalam hal food loss dan food waste di dunia. Indonesia diperkirakan menghasilkan 13 juta ton sampah makanan setiap tahunnya. Timbunan food loss dan food waste Indonesia pada 2000–2019 yaitu 23-48 juta ton/tahun setara dengan 115- 184 kg/kapita/tahun. Studi menemukan lebih dari 30% sampah di Indonesia berasal dari makanan. Kehilangan ini menghasilkan kerugian sebesar Rp 213-551 trilyun/tahun atau setara dengan 4-5% PDB Indonesia pertahun.</item>
     </string-array>
 

@@ -8,6 +8,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.dicoding.saveplate.R
 import com.dicoding.saveplate.databinding.ActivityResultBinding
+import com.dicoding.saveplate.ui.recycle.RecycleActivity
 import org.json.JSONObject
 
 
@@ -32,7 +33,7 @@ class ResultActivity : AppCompatActivity() {
         if (uji?.get(0)?.equals("Fresh") == true) {
             binding.summary.text = "Your food is safe to consume!"
         } else {
-            binding.summary.text = "Sorry, your food is not suitable for consumption."
+            binding.summary.text = "Sorry, your food is not suitable for consumption. Let's find a way to process it by clicking the Recycle button."
         }
 
         binding.confidence.text = "Confidence prediction: $confidence%"
@@ -41,9 +42,9 @@ class ResultActivity : AppCompatActivity() {
         }
 
         binding.back.setOnClickListener {
-            val intentScan = Intent(this, ScanActivity::class.java)
+            val intentScan = Intent(this, RecycleActivity::class.java)
             startActivity(intentScan)
-            finish()
+//            finish()
         }
 
 //        binding.give.setOnClickListener {
