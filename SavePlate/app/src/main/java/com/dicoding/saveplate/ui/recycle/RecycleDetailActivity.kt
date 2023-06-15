@@ -5,10 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowInsets
 import android.view.WindowManager
-import com.dicoding.saveplate.R
-import com.dicoding.saveplate.data.Insights
 import com.dicoding.saveplate.data.Recycle
-import com.dicoding.saveplate.databinding.ActivityDetailInsightBinding
 import com.dicoding.saveplate.databinding.ActivityRecycleDetailBinding
 
 class RecycleDetailActivity : AppCompatActivity() {

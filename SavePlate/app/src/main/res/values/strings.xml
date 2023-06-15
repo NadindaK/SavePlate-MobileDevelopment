@@ -19,7 +19,6 @@
     <string name="rotten">Sorry, your food is not suitable for consumption.\nLet\'s find a way to process it by clicking the Process button.</string>
     <string name="condition">Condition: Rotten/Fresh</string>
     <string name="check">check another</string>
-    <string name="donate">Donate</string>
     <string name="recycle">Recycle</string>
 
     <string-array name="data_title">

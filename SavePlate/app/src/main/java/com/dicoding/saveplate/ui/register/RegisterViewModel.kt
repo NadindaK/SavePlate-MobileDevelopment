@@ -4,13 +4,11 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
 import com.dicoding.saveplate.data.RegisterPayload
 import com.dicoding.saveplate.data.UserPreference
 import com.dicoding.saveplate.response.RegisterResponse
 import com.dicoding.saveplate.retrofit.ApiConfig
 import com.dicoding.saveplate.ui.Event
-import kotlinx.coroutines.launch
 import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback

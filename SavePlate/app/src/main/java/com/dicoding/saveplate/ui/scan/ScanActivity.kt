@@ -10,32 +10,23 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
-import android.view.WindowInsets
-import android.view.WindowManager
 import android.hardware.Camera
 import android.view.View
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
-//import androidx.camera.core.Camera
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
-import androidx.lifecycle.ViewModelProvider
 import android.Manifest
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import android.view.MenuItem
 import com.dicoding.saveplate.MainActivity
 import com.dicoding.saveplate.R
-//import com.dicoding.saveplate.data.UserPreference
-import com.dicoding.saveplate.databinding.ActivityProfileBinding
 import com.dicoding.saveplate.databinding.ActivityScanBinding
 import com.dicoding.saveplate.retrofit.ApiConfig
-import com.dicoding.saveplate.ui.ViewModelFactory
-import com.dicoding.saveplate.ui.profile.ProfileViewModel
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
@@ -44,12 +35,9 @@ import com.dicoding.saveplate.data.UserPreference
 import com.dicoding.saveplate.response.ScanResponse
 import com.dicoding.saveplate.ui.profile.ProfileActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import com.google.android.material.button.MaterialButton
-import com.google.android.material.navigation.NavigationBarView
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
@@ -169,7 +157,6 @@ class ScanActivity : AppCompatActivity() {
 
             val file = reduceFileImage(getFile as File)
 
-//            val description = binding.deskripsiCerita.text.toString().toRequestBody("text/plain".toMediaType())
             val requestImageFile = file.asRequestBody("image/jpeg".toMediaType())
             val imageMultipart: MultipartBody.Part = MultipartBody.Part.createFormData(
                 "file",
@@ -202,9 +189,6 @@ class ScanActivity : AppCompatActivity() {
                             Toast.makeText(this@ScanActivity, "Check food successfully", Toast.LENGTH_SHORT).show()
                             val intent = Intent(this@ScanActivity, ResultActivity::class.java)
 
-//                            val confidence = responseBody.confidence as? Double ?: 0
-
-//                            val result = response.errorBody()?.string()?.let { JSONObject(it) }
                             intent.putExtra("confidence", responseBody.confidence.toString())
                             intent.putExtra("label", responseBody.label)
 

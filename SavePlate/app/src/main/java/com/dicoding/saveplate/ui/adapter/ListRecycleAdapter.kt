@@ -1,8 +1,6 @@
 package com.dicoding.saveplate.ui.adapter
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,9 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.dicoding.saveplate.R
-import com.dicoding.saveplate.data.Insights
 import com.dicoding.saveplate.data.Recycle
-import com.dicoding.saveplate.ui.detailInsight.DetailInsightActivity
 import com.dicoding.saveplate.ui.recycle.RecycleDetailActivity
 
 class ListRecycleAdapter(private val listInsights: ArrayList<Recycle>) : RecyclerView.Adapter<ListRecycleAdapter.ListViewHolder>() {

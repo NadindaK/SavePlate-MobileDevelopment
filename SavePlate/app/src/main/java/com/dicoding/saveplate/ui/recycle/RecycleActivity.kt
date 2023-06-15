@@ -1,16 +1,14 @@
 package com.dicoding.saveplate.ui.recycle
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.dicoding.saveplate.R
-import com.dicoding.saveplate.data.Insights
 import com.dicoding.saveplate.data.Recycle
-import com.dicoding.saveplate.databinding.ActivityLandingBinding
-import com.dicoding.saveplate.databinding.ActivityLoginBinding
 import com.dicoding.saveplate.databinding.ActivityRecycleBinding
-import com.dicoding.saveplate.ui.adapter.ListInsightsAdapter
 import com.dicoding.saveplate.ui.adapter.ListRecycleAdapter
 
 class RecycleActivity : AppCompatActivity() {
@@ -29,6 +27,7 @@ class RecycleActivity : AppCompatActivity() {
         listInsights.setHasFixedSize(true)
 
         supportActionBar?.title = "Recycle Idea"
+        supportActionBar!!.setBackgroundDrawable(ColorDrawable(Color.parseColor("#44746D")))
 
         list.addAll(getListInsights())
         showRecyclerList()
