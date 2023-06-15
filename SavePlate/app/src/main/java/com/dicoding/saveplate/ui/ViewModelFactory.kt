@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.dicoding.saveplate.MainViewModel
 import com.dicoding.saveplate.data.UserPreference
+import com.dicoding.saveplate.ui.landing.LandingViewModel
 import com.dicoding.saveplate.ui.login.LoginViewModel
 import com.dicoding.saveplate.ui.profile.ProfileViewModel
 import com.dicoding.saveplate.ui.register.RegisterViewModel
@@ -30,6 +31,10 @@ class ViewModelFactory (private val pref: UserPreference, private val context: C
 
             modelClass.isAssignableFrom(ScanViewModel::class.java) -> {
                 ScanViewModel(pref) as T
+            }
+
+            modelClass.isAssignableFrom(LandingViewModel::class.java) -> {
+                LandingViewModel(pref) as T
             }
 
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)

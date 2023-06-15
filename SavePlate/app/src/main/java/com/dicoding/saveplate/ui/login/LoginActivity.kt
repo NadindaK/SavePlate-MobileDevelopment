@@ -64,6 +64,11 @@ class LoginActivity : AppCompatActivity() {
         loginViewModel = ViewModelProvider(this, ViewModelFactory(UserPreference.getInstance(dataStore), this)
         )[LoginViewModel::class.java]
 
+
+        loginViewModel.isLoading.observe(this) {
+            showLoading(it)
+        }
+
         loginViewModel.getUser().observe(this) { user ->
             this.user = user
         }
@@ -84,30 +89,37 @@ class LoginActivity : AppCompatActivity() {
                 else -> {
                     loginViewModel.postLogin(email, password).observe(this@LoginActivity){ result ->
 
-                            loginViewModel.login(result.token)
-                            Log.d("tagDebug", result.token)
-                            AlertDialog.Builder(this).apply {
-                                setTitle("Login berhasil")
-                                setMessage("Selamat Anda berhasil masuk")
-                                setPositiveButton("Lanjut") { _, _ ->
-                                    val intent = Intent(context, MainActivity::class.java)
-                                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-                                    startActivity(intent)
-                                    finish()
+                                loginViewModel.login(result.token)
+                                Log.d("tagDebug", result.token)
+                                AlertDialog.Builder(this).apply {
+                                    setTitle("Login berhasil")
+                                    setMessage("Selamat Anda berhasil masuk")
+                                    setPositiveButton("Lanjut") { _, _ ->
+                                        val intent = Intent(context, MainActivity::class.java)
+                                        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                                        startActivity(intent)
+                                        finish()
+                                    }
+                                    create()
+                                    show()
                                 }
-                                create()
-                                show()
-                            }
-//
-//                        } else {
-//                            Toast.makeText(this@LoginActivity, "Login Gagal. Silakan Coba lagi.", Toast.LENGTH_SHORT).show()
-//                        }
 
+                    }
+                    loginViewModel.snackbarText.observe(this) {
+                        it.getContentIfNotHandled()?.let { snackBarText ->
+                            Toast.makeText(applicationContext, snackBarText, Toast.LENGTH_SHORT).show()
+                        }
                     }
 
                 }
             }
         }
     }
+
+
+    private fun showLoading(isLoading: Boolean) {
+        binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+    }
+
 
 }

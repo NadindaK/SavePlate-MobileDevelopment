@@ -2,6 +2,8 @@ package com.dicoding.saveplate
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -23,16 +25,17 @@ import com.dicoding.saveplate.ui.adapter.ListInsightsAdapter
 import com.dicoding.saveplate.ui.landing.LandingActivity
 import com.dicoding.saveplate.ui.profile.ProfileActivity
 import com.dicoding.saveplate.ui.scan.ScanActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class MainActivity : AppCompatActivity(), View.OnClickListener  {
 
     private lateinit var listInsights: RecyclerView
     private val list = ArrayList<Insights>()
     private lateinit var mainViewModel: MainViewModel
     private lateinit var binding: ActivityMainBinding
-
+    private lateinit var bottomNavigationView: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,6 +49,27 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btnAboutPage.setOnClickListener(this)
 
         supportActionBar?.title = "Home"
+        supportActionBar!!.setBackgroundDrawable(ColorDrawable(Color.parseColor("#44746D")))
+
+        bottomNavigationView = binding.navView
+
+        bottomNavigationView.selectedItemId = R.id.home
+
+        bottomNavigationView.setOnItemSelectedListener { item ->
+            val intentProfile = Intent(this, ProfileActivity::class.java)
+            val intentScan = Intent(this, ScanActivity::class.java)
+            when (item.itemId) {
+                R.id.home -> {
+                    true}
+                R.id.scan -> {
+                    startActivity(intentScan)
+                    true}
+                R.id.profile -> {
+                    startActivity(intentProfile)
+                    true}
+            }
+            false
+        }
 
         setupViewModel()
 
@@ -97,18 +121,22 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater = menuInflater
-        inflater.inflate(R.menu.menu, menu)
+        inflater.inflate(R.menu.option_menu, menu)
 
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val intentProfile = Intent(this, ProfileActivity::class.java)
         when (item.itemId) {
-            R.id.profile -> startActivity(intentProfile)
             R.id.logout -> mainViewModel.logout()
 
         }
         return super.onOptionsItemSelected(item)
     }
+
+    override fun onBackPressed() {
+        finishAffinity()
+    }
+
+
 }
