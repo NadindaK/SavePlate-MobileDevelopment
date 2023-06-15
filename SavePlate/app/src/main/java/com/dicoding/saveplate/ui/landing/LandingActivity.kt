@@ -30,6 +30,8 @@ class LandingActivity : AppCompatActivity() {
         binding = ActivityLandingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        playAnimation()
+
         supportActionBar?.hide()
 
         setupView()
@@ -60,6 +62,7 @@ class LandingActivity : AppCompatActivity() {
     }
 
 
+
     override fun onStart() {
         super.onStart()
         landingViewModel = ViewModelProvider(this, ViewModelFactory(UserPreference.getInstance(dataStore),this)
@@ -77,5 +80,30 @@ class LandingActivity : AppCompatActivity() {
         moveTaskToBack(true)
     }
 
+
+    private fun playAnimation(){
+        ObjectAnimator.ofFloat(binding.ivPhoto, View.TRANSLATION_X, -30f, 30f).apply {
+            duration = 6000
+            repeatCount = ObjectAnimator.INFINITE
+            repeatMode = ObjectAnimator.REVERSE
+        }.start()
+
+        val title = ObjectAnimator.ofFloat(binding.tvTitle, View.ALPHA, 1f).setDuration(500)
+        val login = ObjectAnimator.ofFloat(binding.buttonLogin, View.ALPHA, 1f).setDuration(500)
+        val acc = ObjectAnimator.ofFloat(binding.tvTitle2, View.ALPHA, 1f).setDuration(500)
+        val register = ObjectAnimator.ofFloat(binding.buttonRegister, View.ALPHA, 1f).setDuration(500)
+
+
+        AnimatorSet().apply {
+            playSequentially(
+                title,
+                login,
+                acc,
+                register,
+            )
+            startDelay = 500
+            start()
+        }
+    }
 
 }

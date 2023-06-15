@@ -46,6 +46,15 @@
             android:exported="false"
             android:label="@string/title_activity_donate_loc" />
         <activity
+            android:name=".ui.recycle.RecycleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.adapter.ListRecycleAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".ui.recycle.RecycleDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.scan.ResultActivity"
             android:exported="false" />
         <activity

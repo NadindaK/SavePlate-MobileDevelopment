@@ -12,6 +12,8 @@ import com.dicoding.saveplate.databinding.ActivityResultBinding
 import com.dicoding.saveplate.ui.donateLoc.DonateLocActivity
 import com.dicoding.saveplate.ui.profile.ProfileActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.dicoding.saveplate.ui.recycle.RecycleActivity
+import org.json.JSONObject
 
 
 class ResultActivity : AppCompatActivity() {
@@ -60,6 +62,7 @@ class ResultActivity : AppCompatActivity() {
         } else {
             binding.summary.text = "Sorry, your food is not suitable for consumption."
             binding.imageView2.setImageDrawable(getResources().getDrawable(R.drawable.cross))
+            binding.summary.text = "Sorry, your food is not suitable for consumption. Let's find a way to process it by clicking the Recycle button."
         }
 
         binding.confidence.text = "Confidence prediction: $confidence%"
@@ -71,6 +74,9 @@ class ResultActivity : AppCompatActivity() {
             val intentBack = Intent(this, ScanActivity::class.java)
             startActivity(intentBack)
             finish()
+            val intentScan = Intent(this, RecycleActivity::class.java)
+            startActivity(intentScan)
+//            finish()
         }
 
         binding.give.setOnClickListener {
