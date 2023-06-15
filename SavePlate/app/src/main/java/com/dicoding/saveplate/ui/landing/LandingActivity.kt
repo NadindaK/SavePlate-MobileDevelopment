@@ -23,11 +23,12 @@ class LandingActivity : AppCompatActivity() {
         binding = ActivityLandingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        playAnimation()
+
         supportActionBar?.hide()
 
         setupView()
         setupAction()
-//        playAnimation()
     }
 
     private fun setupView() {
@@ -53,26 +54,33 @@ class LandingActivity : AppCompatActivity() {
         }
     }
 
-//    private fun playAnimation(){
-//        ObjectAnimator.ofFloat(binding.ivPhoto, View.TRANSLATION_X, -30f, 30f).apply {
-//            duration = 6000
-//            repeatCount = ObjectAnimator.INFINITE
-//            repeatMode = ObjectAnimator.REVERSE
-//        }.start()
-//
-//        val title = ObjectAnimator.ofFloat(binding.tvTitle, View.ALPHA, 1f).setDuration(500)
-//        val login = ObjectAnimator.ofFloat(binding.buttonLogin, View.ALPHA, 1f).setDuration(500)
-//        val register = ObjectAnimator.ofFloat(binding.buttonRegister, View.ALPHA, 1f).setDuration(500)
-//
-//
+    private fun playAnimation(){
+        ObjectAnimator.ofFloat(binding.ivPhoto, View.TRANSLATION_X, -30f, 30f).apply {
+            duration = 6000
+            repeatCount = ObjectAnimator.INFINITE
+            repeatMode = ObjectAnimator.REVERSE
+        }.start()
+
+        val title = ObjectAnimator.ofFloat(binding.tvTitle, View.ALPHA, 1f).setDuration(500)
+        val login = ObjectAnimator.ofFloat(binding.buttonLogin, View.ALPHA, 1f).setDuration(500)
+        val acc = ObjectAnimator.ofFloat(binding.tvTitle2, View.ALPHA, 1f).setDuration(500)
+        val register = ObjectAnimator.ofFloat(binding.buttonRegister, View.ALPHA, 1f).setDuration(500)
+
+
 //        val together = AnimatorSet().apply {
 //            playTogether(login, register)
 //        }
-//
-//
-//        AnimatorSet().apply {
-//            playSequentially(title, together)
-//            start()
-//        }
-//    }
+
+
+        AnimatorSet().apply {
+            playSequentially(
+                title,
+                login,
+                acc,
+                register,
+            )
+            startDelay = 500
+            start()
+        }
+    }
 }

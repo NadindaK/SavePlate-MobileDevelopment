@@ -26,6 +26,15 @@
         android:theme="@style/Theme.SavePlate"
         tools:targetApi="31">
         <activity
+            android:name=".ui.recycle.RecycleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.adapter.ListRecycleAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".ui.recycle.RecycleDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.scan.ResultActivity"
             android:exported="false" />
         <activity
