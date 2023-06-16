@@ -8,6 +8,14 @@ We will use Android Studio and Kotlin Language to develop our mobile application
 
 ## Features
 
+- Food Scan : This feature allows user to scan their food by upload a photo of their food. And the application will give the information about the food quality.
+
+- Food Insight : This feature provides some informations about food, such as, tips to storing food and food waste condition in Indonesia.
+
+- Donation Discover : This feature helps user to locate the food donation spot.
+
+- Recycler Ideas : This feature provides information and suggestion about how to process and recycle the food that no longer suitable for consumption. 
+
 ## Tools 
 
 |                     |    Name    |   
@@ -29,15 +37,6 @@ Libraries | Retrofit, Live Data, Glide/Picasso, etc.
 - git clone https://github.com/NadindaK/SavePlate-MobileDevelopment
 5. Press Enter to clone the repository
 
-## Features
-
-- Food Scan : This feature allows user to scan their food by upload a photo of their food. And the application will give the information about the food quality.
-
-- Food Insight : This feature provides some informations about food, such as, tips to storing food and food waste condition in Indonesia.
-
-- Donation Discover : This feature helps user to locate the food donation spot.
-
-- Recycler Ideas : This feature provides information and suggestion about how to process and recycle the food that no longer suitable for consumption. 
 
 
 
