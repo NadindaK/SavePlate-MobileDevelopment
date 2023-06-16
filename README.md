@@ -34,7 +34,7 @@ Libraries | Retrofit, Live Data, Glide/Picasso, etc.
 2. Open terminal from your IDE or command prompt
 3. Select a directory to download the repository
 4. Type git clone and paste the URL
-- git clone https://github.com/NadindaK/SavePlate-MobileDevelopment
+- git clone https://github.com/NadindaK/SavePlate-MobileDevelopment.git
 5. Press Enter to clone the repository
 
 
