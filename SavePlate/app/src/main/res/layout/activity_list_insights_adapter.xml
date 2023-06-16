@@ -6,9 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="110dp"
     android:layout_gravity="center"
-    android:layout_marginStart="8dp"
     android:layout_marginTop="5dp"
-    android:layout_marginEnd="8dp"
     android:layout_marginBottom="5dp"
     card_view:cardCornerRadius="4dp"
     tools:context=".ui.adapter.ListInsightsAdapter">

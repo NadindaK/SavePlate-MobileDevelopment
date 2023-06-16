@@ -6,12 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".ui.scan.ResultActivity">
 
-
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="228dp"
         android:layout_height="186dp"
-        android:layout_marginTop="78dp"
+        android:layout_marginTop="68dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +24,7 @@
         android:layout_marginBottom="22dp"
         android:text="Here's the result!"
         android:textColor="@color/black"
-        android:textSize="28dp"
+        android:textSize="26dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="@+id/imageView2"
@@ -38,7 +37,7 @@
         android:id="@+id/confidence"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="15dp"
         android:text="Confidence prediction: 50%"
         android:textColor="@color/black"
         android:textSize="16dp"
@@ -67,7 +66,7 @@
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
         android:textSize="18dp"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="15dp"
         android:text="@string/rotten"
         android:textAlignment="center"
         android:textColor="@color/black"

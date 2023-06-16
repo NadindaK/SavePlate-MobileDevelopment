@@ -57,12 +57,11 @@ class ResultActivity : AppCompatActivity() {
         val uji = label?.split(" ")
 
         if (uji?.get(0)?.equals("Fresh") == true) {
-            binding.summary.text = "Your food is safe to consume!"
+            binding.summary.text = "Your food is safe to consume! Let's discover a place to donate your food by clicking the Donate button"
             binding.imageView2.setImageDrawable(getResources().getDrawable(R.drawable.check))
         } else {
-            binding.summary.text = "Sorry, your food is not suitable for consumption."
             binding.imageView2.setImageDrawable(getResources().getDrawable(R.drawable.cross))
-            binding.summary.text = "Sorry, your food is not suitable for consumption. Let's find a way to process it by clicking the Recycle button."
+            binding.summary.text = "Sorry, your food is not suitable for consumption. Let's find a way to process it by clicking the Recycle button"
         }
 
         binding.confidence.text = "Confidence prediction: $confidence%"
@@ -71,17 +70,13 @@ class ResultActivity : AppCompatActivity() {
         }
 
         binding.back.setOnClickListener {
-            val intentBack = Intent(this, ScanActivity::class.java)
-            startActivity(intentBack)
-            finish()
-            val intentScan = Intent(this, RecycleActivity::class.java)
-            startActivity(intentScan)
-//            finish()
+            val intentRecycle = Intent(this, RecycleActivity::class.java)
+            startActivity(intentRecycle)
         }
 
         binding.give.setOnClickListener {
-            val intentGive = Intent(this, DonateLocActivity::class.java)
-            startActivity(intentGive)
+            val intentDonate = Intent(this, DonateLocActivity::class.java)
+            startActivity(intentDonate)
         }
 
     }
