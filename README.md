@@ -15,7 +15,7 @@ We will use Android Studio and Kotlin Language to develop our mobile application
 UI/UX | Figma
 IDE | Android Studio
 Language | Kotlin
-Libraries | Retrofit, Room, Live Data, Glide/Picasso, etc.
+Libraries | Retrofit, Live Data, Glide/Picasso, etc.
 
 
 ## How to download this repository to your local 
