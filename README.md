@@ -1,6 +1,8 @@
 # SavePlate-MobileDevelopment
 Repository for mobile development of SavePlate application
 
+![logo](https://github.com/NadindaK/SavePlate-MobileDevelopment/assets/134950855/c272a3da-9948-4c8a-92f8-c24f20c5af18)
+
 [Check our Main Repository](https://github.com/NadindaK/SavePlate)
 
 ## About our mobile development
